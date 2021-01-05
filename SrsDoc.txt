@@ -1,0 +1,134 @@
+-------------------------------------------
+Software Requirements Specification
+for
+<Sentiment Analysis>
+Salih Alperen
+Hasan Kalyoncu University
+04.01.2021
+
+
+
+
+
+
+
+Table of Contents
+
+Revision History	3
+1.	Introduction	4
+1.1. Purpose of Project	4
+1.2. Target sector or users	4
+1.3. What is the Scope of project?	4
+1.4. References	4
+2. Overall Descriptions	4
+2.1. Product Perspective	4
+2.2. Product Features	4
+2.3. User classes and characteristics	4
+2.4. Operating Environment	5
+2.5. Design and implementation constraints	5
+2.6. Assumptions and dependencies	5
+3. System Features and Requirements	5
+3.1 Functional Requirements and System Features	5
+4. External Interface Requirements	5
+4.1. User interfaces	5
+4.2. Hardware Interfaces	5
+4.3. Software interfaces	5
+4.4. Communication interfaces	5
+5. Non-Functional Requirements	6
+5.1. Performance requirements	6
+5.2. Safety requirements	6
+5.3. Security Requirements	6
+5.4. Software Quality Attributes	6
+Appendix A: Definitions and Acronyms	6
+Appendix B: Analysis Models	6
+
+Revision History
+NameDateReason For ChangesVersion
+1. Introduction
+A software requirements specification (SRS) is a document that describes what the software will do and how it will be expected to perform. It also describes the functionality the product needs to fulfill all stakeholders (business, users) needs.
+1.1. Purpose of Project
+Sentiment analysis is the process of determining whether some text (opinion or feelings) containing in the way positive, negative or neutral. A sentiment analysis for text is also known as NLP (Natural Language Processing). With Sentiment Analysis which has been  very popular in last this decade , you can have a chance to learn what people are thinking  about much-talked subjects , or you can learn what people is thinking about some companies. Therefore there are many workspaces for Sentiment Analysis such as reputation research, market analysis, customer service, and so on…
+We have been having unbearable pain because of Corona Virus since 2019.Scientist all over the world had been trying to find some cure of this virus. Finally, some of countries announced that they come up with some vaccine. This has brought big chaos together on social media. In this project we will try to find the answer of question “Who is thinking positive about vaccine and who is not?”
+What is the problem? What is the background of this problem and what is your solution?
+1.2. Target sector or users
+Corona virus and its cure is viral almost whole humanity .Actually, some of people hesitate to use these vaccines. That is why those people can check what the other people are thinking about it. It can be helpful either who wants to use or does not want to use.
+1.3. What is the Scope of project?
+In this project, we will be using real data that are taken from Twitter by using Twitter API. We will have some data and we will extract important part from first state by using some machine learning algorithms. After these parts, we will make a decision whether user opine positive, negative or neutral .Then we will store it in our Database. Lastly we want to make a website that we can search everything about the program easily.
+1.4. References
+https://ieeexplore.ieee.org/abstract/document/7924253
+2. Overall Descriptions
+2.1. Product Perspective
+Corona has made a huge impact on various aspects of human life around the world. Now as a cure , there are several kind of vaccines have been released such as Pfizer ,BioNTech ,Sinovac , Moderna. In this part of the product, we will be looking for the answer of  ‘What do people think about it ?’ We do not need any login register system. We need to have the data  which is twitter users comment out for these vaccines. So we do not need to have user’s name , phone , address ,credit card or any other private information.
+2.2. Product Features
+We will have relational database which is before process as a property of tweet user name, language, date, hashtag, country and so on. After this we will just get the content of tweet. Then we are storing part of information in another table. We need to have at least 10.000 tweets for this project. Then we are putting this tweets into our   ML algorithm then we are detecting what user feels about it .Then we are storing it again another table information what is positive, negative or neutral.
+
+2.3. User classes and characteristics
+In this project we will use web application. User classes will be interacting just detecting tweets polarity. On the other hand , technical issues , security and safety issues and database issues will be taking care of administrators.
+Users
+Users who are interested to use the tool looking for knowing people’s thoughts about a desired topic. 
+
+Admin
+Admins are who have valuable roles different than users basically familiar with user featurization can be control the datasets and manage the application.
+
+2.4. Operating Environment
+You can use this product any operating system where you can access the Internet  such as Window and Linux  Big part of this project which is preprocess of data and detecting sentiment with ML algorithm  is encoding by Python. Then we will built website to use this . We will be using MongoDB , NodeJs, ExpressJs and React.
+
+
+2.5. Design and implementation constraints
+The project may work for several distributions of Linux and Windows PCs, also smart phones and smart. IOS based technological devices  cannot support this project. For the Android phones it would be better to use it after Android 4.4.
+2.6. Assumptions and dependencies
+Only authorized persons who are allowed to use and access the database, web pages and the product engine. For this reason the system will be safety and fast. When the User’s internet connection lost or not to reach application we  optimize and renew the application.
+
+3. System Features and Requirements 
+3.1 Functional Requirements and System Features
+The function of the project are the users can use the keyword filter to finding specific tweets, and Identifying the sentiment polarity (positive, negative or neutral) of tweets on certain topics from twitter.
+After the getting data and tokenizing  ,Visualizing the results of sentiment classification, influential blogger and topic extraction modules into clear and interesting form. At The end part, Reports and Info-graphics that shows the statistics required.
+ 4. External Interface Requirements
+4.1. User interfaces
+For the Browser-side of web we will be using NodeJs and for the Server-side we will be using ReactJs.
+4.2. Hardware Interfaces
+Unlike IOS , the tools for web development are all operating system agnostic. For this application we are recommending to you use these browsers Chrome , Firefox and Opera.
+
+4.3. Software interfaces
+For the software interfaces, firstly we using python tweepy api to get data from twitter. Preparing data and arrange data. Using python natural language toolkit (NLTK) tokenization the data using python libraries pandas and numpy. For the report part using plotly and seaborn to visulate the data and output. After this we planning to integrate to our project on web base. Using JavaScript to creating web application and integrate our project. For the data base planning to use mongoDB.
+
+4.4. Communication interfaces
+Internet connection and a web browser are required in order to make use of several functions and to be executed such as searching, viewing and downloading. And also planning to add contact page which people can communicate and the questions via mail. 
+ 5. Non-Functional Requirements
+5.1. Performance requirements
+In this part of the project, we need to try to detect system errors or operating system errors. Also this project will be integrated on web development. We need to be sure of that every components in the project must be working good efficiency.
+5.2. Safety requirements
+In this project we don’t have any safety requirements except database issues. We need to have backups of database at certain time intervals.
+5.3. Security Requirements
+There are no exactly Security Requirements for this project. Any user can use it and access interface of our project. On the other hand, just authorized people can reach the database and specific part of the allowed management.
+5.4. Software Quality Attributes
+This project has basic interface for users. Every step is defined in easy way, so users do not get confused. We are using Machine Learning Algorithm to decide whether tweets are in positive, negative and neutral polarity. So we are providing high level correctness. We will update our dataset per a week, so we will see how people changing their opinion. It will give us more maintainability. Also everybody can check our algorithm, when they want to learn   whether one tweet`s polarity is in positive or not.
+
+Appendix A: Definitions and Acronyms 
+NLP: Natural Language Processing 
+MongoDB : Mongo Database
+Pos : Positive
+Neg : Negative
+Neu: Neutral
+NLTK: Natural Language Tokenization Kit
+ML : Machine Learning
+Appendix B: Analysis Models
+
+Activity Diagram:
+
+Use case Diagram:
+
+
+
+Sequence Diagram: 
+
+
+
+
+
+
+Flow Diagram: 
+
+
+Software Requirements Specification for <Project>		Page 8
+
